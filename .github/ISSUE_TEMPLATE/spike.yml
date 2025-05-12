@@ -1,0 +1,30 @@
+name: Spike
+description: Investigate or research a specific unknown
+title: "[Spike]: "
+labels: ["spike"]
+body:
+  - type: textarea
+    id: describe
+    attributes:
+      label: Describe the spike
+      description: Include details and be descriptive
+      placeholder: This spike ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected outcome
+      description: A concise description of the expected outcome.
+      placeholder: The expected outcome is ...
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else?
+      description: Links? References? Anything that will give us more context about the spike!
+      placeholder: |
+        Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: false
