@@ -1,9 +1,7 @@
 function App() {
   return (
     <>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <p>Nothing to see here. Run the storybook to see the components.</p>
     </>
   );
 }
