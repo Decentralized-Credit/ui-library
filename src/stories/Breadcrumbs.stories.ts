@@ -1,9 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Breadcrumbs from "@/components/custom/Breadcrumbs";
 
-
-
-
 const meta = {
   title: "Components/Breadcrumbs",
   component: Breadcrumbs,
@@ -12,14 +9,12 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-
     className: {
       control: "text",
       description: "Additional CSS classes to add to the component",
     },
-
   },
-  args: {  },
+  args: {},
 } satisfies Meta<typeof Breadcrumbs>;
 
 export default meta;
