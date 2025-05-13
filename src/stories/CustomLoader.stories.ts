@@ -8,7 +8,8 @@ const meta = {
     layout: "centered",
     docs: {
       description: {
-        component: "The color of the loader is set using tailwind color classes. Eg: text-accent",
+        component:
+          "The color of the loader is set using tailwind color classes. Eg: text-accent",
       },
     },
   },
