@@ -29,7 +29,7 @@ export default defineConfig({
         "src/main.tsx",
       ],
       outDir: "dist",
-      tsconfigPath: path.resolve(__dirname, "tsconfig.json"),
+      tsconfigPath: path.resolve(__dirname, "tsconfig.build.json"),
       rollupTypes: true,
     }),
   ],
