@@ -21,6 +21,7 @@ export default defineConfig({
         "src/components/**/*.ts",
         "src/components/**/*.tsx",
         "src/index.css",
+        "src/types/**/*.d.ts",
       ],
       exclude: [
         "**/*.stories.tsx",
