@@ -1,8 +1,9 @@
 function App() {
   return (
-    <>
-      <p>Nothing to see here. Run the storybook to see the components.</p>
-    </>
+    <p className="p-5 text-center text-2xl">
+      Nothing to see here. Run the storybook script to see the component
+      library.
+    </p>
   );
 }
 

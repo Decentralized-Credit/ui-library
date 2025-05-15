@@ -2,10 +2,25 @@
   "name": "ui-library",
   "private": true,
   "version": "0.0.1",
+  "description": "React UI Library",
   "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build": "tsc -b && pnpm build:types && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
@@ -17,6 +32,11 @@
     "*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "format"
     ]
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwindcss": "^4"
   },
   "dependencies": {
     "@radix-ui/react-alert-dialog": "^1.1.13",
@@ -72,11 +92,11 @@
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "storybook": "^8.6.12",
-    "tailwindcss": "^4.1.6",
     "tw-animate-css": "^1.2.4",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.3",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.1.3"
   }
