@@ -1,5 +1,5 @@
 {
-  "name": "ui-library",
+  "name": "@decentralized-credit/ui-library",
   "private": true,
   "version": "0.0.1",
   "description": "React UI Library",
@@ -17,6 +17,9 @@
     "dist"
   ],
   "sideEffects": false,
+  "publishConfig": {
+    "@decentralized-credit:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build:types": "tsc -p tsconfig.build.json",
