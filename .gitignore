@@ -30,3 +30,4 @@ dist-ssr
 secrets/**
 
 *storybook.log
+storybook-static
