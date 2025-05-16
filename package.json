@@ -21,13 +21,13 @@
     "@decentralized-credit:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "storybook dev -p 6006",
     "build:types": "tsc -p tsconfig.build.json",
     "build": "tsc -b && pnpm build:types && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
-    "prepare": "husky",
+    "prepare": "[ -n \"$CI\" ] || husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
