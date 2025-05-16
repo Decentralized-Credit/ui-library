@@ -1,23 +1,27 @@
-# Title
+# Decentralized Credit UI Library
 
-Decentralized Credit React-based UI Library.
+A React-based UI library. Built with TypeScript, Tailwind CSS, and shadcn/ui components.
+Check out the [Storybook](https://deployed-link-TBD") for documentation.
+
+install with `pnpm i @decentralized-credit/ui-library`
 
 ## About
 
-This is a React-based UI library for Decentralized Credit. It is built with Tailwind CSS and Typescript. Shadcn components are used for the UI components. Storybook is used for the documentation and development.
-
-Check out the [Storybook](https://deployed-link-TBD") for the documentation and development.
-
-## Getting Started
+- Modern and accessible UI components
+- Built with TypeScript
+- Tailwind CSS for styling
+- Storybook for documentation and development
+- ESLint and Prettier for code quality
+- Vite for fast development and building.
 
 ### Prerequisites
 
-- Node.js
-- pnpm
+- Node.js >= v18
+- pnpm >= v8
 
 ### Setup
 
-```
+```bash
 pnpm install
 ```
 
@@ -27,19 +31,15 @@ pnpm install
 
 To start the development server, run:
 
-```
+```bash
 pnpm storybook
 ```
 
-### Staging
+This will start Storybook on port 6006, where you can view and interact with all components.
 
-```
-pnpm build
-```
+### Staging & Production
 
-### Production
-
-```
+```bash
 pnpm build
 ```
 
@@ -50,12 +50,10 @@ pnpm build
 The package is publicly available on GitHub Packages. You can install it directly with:
 
 ```
-pnpm install @decentralized-credit/ui-library
+pnpm i @decentralized-credit/ui-library
 ```
 
-### Using the package
-
-Import components directly from the package:
+### Basic Usage
 
 ```jsx
 import { Button } from "@decentralized-credit/ui-library";
@@ -66,3 +64,6 @@ function MyComponent() {
 ```
 
 ## External Links
+
+- [Storybook Documentation](https://deployed-link-TBD)
+- [GitHub Repository](https://github.com/decentralized-credit/ui-library)

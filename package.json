@@ -42,6 +42,7 @@
     "tailwindcss": "^4"
   },
   "dependencies": {
+    "@decentralized-credit/ui-library": "^0.0.1",
     "@radix-ui/react-alert-dialog": "^1.1.13",
     "@radix-ui/react-avatar": "^1.1.9",
     "@radix-ui/react-checkbox": "^1.3.1",
