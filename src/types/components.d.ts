@@ -29,3 +29,17 @@ export interface CardStepProps extends WC {
   title: string;
   description: React.ReactNode;
 }
+
+export type DotShape = "circle" | "square" | "diamond";
+
+export interface AnimatedGlobeProps extends WC {
+  size?: number;
+  lineColor?: string;
+  speed?: number;
+  latLineSpacing?: number;
+  longLineSpacing?: number;
+  numDots?: number;
+  dotColor?: string;
+  dotSize?: number;
+  dotShape?: DotShape;
+}
