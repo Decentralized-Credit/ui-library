@@ -1,11 +1,14 @@
 import { ReactNode } from "react";
 
-export interface CardContentProps {
+interface WC {
+  className?: string;
+}
+
+export interface CardContentProps extends WC {
   icon: ReactNode;
   title: string;
   description: string;
   backgroundDark?: boolean;
-  className?: string;
 }
 
 export interface CardListItem {
@@ -14,10 +17,15 @@ export interface CardListItem {
   description: string;
 }
 
-export interface CardListProps {
+export interface CardListProps extends WC {
   heading: string;
   items: CardListItem[];
   noIcons?: boolean;
   backgroundDark?: boolean;
-  className?: string;
+}
+
+export interface CardStepProps extends WC {
+  number: number;
+  title: string;
+  description: React.ReactNode;
 }

@@ -1,18 +1,12 @@
 import { cn } from "@/lib/utils";
+import { CardStepProps } from "@/types";
 
-interface CardStepProps {
-  number: number;
-  title: string;
-  description: React.ReactNode;
-  className?: string;
-}
-
-export const CardStep: React.FC<CardStepProps> = ({
+export function CardStep({
   number,
   title,
   description,
   className,
-}) => {
+}: CardStepProps) {
   return (
     <div
       className={cn(
@@ -29,4 +23,4 @@ export const CardStep: React.FC<CardStepProps> = ({
       </div>
     </div>
   );
-};
+}
