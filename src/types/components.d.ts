@@ -14,6 +14,10 @@ interface WithColorScheme {
   secondaryColor?: string;
 }
 
+interface WithChildren {
+  children: ReactReactNode;
+}
+
 export interface CardContentProps extends WithClassName, WithColorScheme {
   icon: ReactNode;
   title: string;
@@ -84,3 +88,16 @@ export interface ColorSchemeSvgProps
   extends WithClassName,
     WithDimensions,
     WithColorScheme {}
+
+export interface OverlineTagProps extends WithClassName, WithChildren {
+  color?: "accent" | "gray";
+}
+
+export interface SectionFadeInProps extends WithClassName, WithChildren {
+  /** Delay in ms before the fade animation starts */
+  delay?: number;
+  /** Root margin for the intersection observer */
+  rootMargin?: string;
+  /** Threshold for the intersection observer (0-1) */
+  threshold?: number;
+}

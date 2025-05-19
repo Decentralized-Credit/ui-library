@@ -27,6 +27,9 @@ import {
   XIcon,
   YoutubeIcon,
 } from "@/components/svg";
+import AccentLine from "@/components/AccentLine";
+import OverlineTag from "@/components/OverlineTag";
+import { SectionFadeIn } from "@/components/SectionFadeIn";
 
 export {
   Button,
@@ -56,4 +59,7 @@ export {
   VertLines,
   XIcon,
   YoutubeIcon,
+  AccentLine,
+  OverlineTag,
+  SectionFadeIn,
 };
