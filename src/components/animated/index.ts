@@ -1,5 +1,4 @@
-// import AnimatedPathGraphic from "./AnimatedPathGraphic";
 import AnimatedGlobe from "./AnimatedGlobe";
-import CanvasPixelGrid from "./CanvasPixelGrid";
+import DotGrid from "./DotGrid";
 
-export { AnimatedGlobe, /*AnimatedPathGraphic,*/ CanvasPixelGrid };
+export { AnimatedGlobe, DotGrid };

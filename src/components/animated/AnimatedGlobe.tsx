@@ -15,7 +15,7 @@ import {
   Points,
 } from "three";
 
-const AnimatedGlobe = ({
+export default function AnimatedGlobe({
   size = 300,
   lineColor = "#00FF66",
   speed = 0.00025,
@@ -26,7 +26,7 @@ const AnimatedGlobe = ({
   dotSize = 0.01,
   dotShape = "diamond",
   className = "",
-}: AnimatedGlobeProps) => {
+}: AnimatedGlobeProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -57,20 +57,21 @@ const AnimatedGlobe = ({
       if (context) {
         context.fillStyle = "white";
 
-        if (shape === "circle") {
-          // Draw a filled circle
-          context.beginPath();
-          context.arc(32, 32, 30, 0, 2 * Math.PI, false);
-          context.fill();
-        } else if (shape === "square") {
-          // Draw a filled square
-          context.fillRect(2, 2, 60, 60);
-        } else if (shape === "diamond") {
-          // Draw a filled diamond (rotated square)
-          context.translate(32, 32);
-          context.rotate(Math.PI / 4); // 45 degrees
-          context.fillRect(-21, -21, 42, 42);
-          context.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+        switch (shape) {
+          case "circle":
+            context.beginPath();
+            context.arc(32, 32, 30, 0, 2 * Math.PI, false);
+            context.fill();
+            break;
+          case "square":
+            context.fillRect(2, 2, 60, 60);
+            break;
+          case "diamond":
+            context.translate(32, 32);
+            context.rotate(Math.PI / 4); // 45 degrees
+            context.fillRect(-21, -21, 42, 42);
+            context.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+            break;
         }
       }
 
@@ -216,6 +217,4 @@ const AnimatedGlobe = ({
       <div ref={containerRef} className="h-full w-full"></div>
     </div>
   );
-};
-
-export default AnimatedGlobe;
+}
