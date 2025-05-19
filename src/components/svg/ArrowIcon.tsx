@@ -1,20 +1,13 @@
-interface ArrowIconProps {
-  width?: number;
-  height?: number;
-  className?: string;
-  fill?: string;
-  stroke?: string;
-  strokeWidth?: number;
-}
+import { BaseSvgProps } from "@/types";
 
-export function ArrowIcon({
+export default function ArrowIcon({
   width = 32,
   height,
   className,
   fill = "currentColor",
   stroke = "none",
   strokeWidth = 1,
-}: ArrowIconProps) {
+}: BaseSvgProps) {
   return (
     <svg
       preserveAspectRatio="xMidYMid meet"
