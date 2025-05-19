@@ -1,7 +1,7 @@
 # Decentralized Credit UI Library
 
 A React-based UI library. Built with TypeScript, Tailwind CSS, and shadcn/ui components.
-Check out the [Storybook](https://deployed-link-TBD") for documentation.
+Check out the [Storybook](https://ui-library-41075982134.europe-west1.run.app/) for documentation.
 
 install with `pnpm i @decentralized-credit/ui-library`
 
@@ -65,5 +65,5 @@ function MyComponent() {
 
 ## External Links
 
-- [Storybook Documentation](https://deployed-link-TBD)
+- [Storybook Documentation](https://ui-library-41075982134.europe-west1.run.app/)
 - [GitHub Repository](https://github.com/decentralized-credit/ui-library)
