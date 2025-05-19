@@ -46,3 +46,12 @@ export interface CustomLineChartProps extends ChartProps {
   tooltipIndicator?: "line" | "dot";
   hideTooltipLabel?: boolean;
 }
+
+export interface PieChartProps extends ChartProps {
+  chartData: PieDataPoint[];
+  size?: string;
+  dataKey: string;
+  nameKey: string;
+  innerRadius?: number;
+  children?: React.ReactNode;
+}

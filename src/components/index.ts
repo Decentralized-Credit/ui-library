@@ -31,7 +31,11 @@ import AccentLine from "@/components/AccentLine";
 import OverlineTag from "@/components/OverlineTag";
 import { SectionFadeIn } from "@/components/SectionFadeIn";
 import SheenBlock from "@/components/SheenBlock";
-import { CustomBarChart, CustomLineChart } from "@/components/Charts";
+import {
+  CustomBarChart,
+  CustomLineChart,
+  CustomPieChart,
+} from "@/components/Charts";
 
 export {
   Button,
@@ -67,4 +71,5 @@ export {
   SheenBlock,
   CustomBarChart,
   CustomLineChart,
+  CustomPieChart,
 };

@@ -81,3 +81,66 @@ export const lineChartConfig2 = {
     color: "hsl(var(--chart-1))",
   },
 };
+
+export const pieChartData1 = [
+  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
+  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
+  { browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
+  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
+  { browser: "other", visitors: 190, fill: "var(--color-other)" },
+];
+
+export const pieChartConfig1 = {
+  visitors: {
+    label: "Visitors",
+  },
+  chrome: {
+    label: "Chrome",
+    color: "hsl(var(--chart-1))",
+  },
+  safari: {
+    label: "Safari",
+    color: "hsl(var(--chart-2))",
+  },
+  firefox: {
+    label: "Firefox",
+    color: "hsl(var(--chart-3))",
+  },
+  edge: {
+    label: "Edge",
+    color: "hsl(var(--chart-4))",
+  },
+  other: {
+    label: "Other",
+    color: "hsl(var(--chart-5))",
+  },
+};
+
+export const pieChartData2 = [
+  { company: "Amazon", share: 38, fill: "var(--color-amazon)" },
+  { company: "Microsoft", share: 28, fill: "var(--color-microsoft)" },
+  { company: "Google", share: 22, fill: "var(--color-google)" },
+  { company: "Others", share: 12, fill: "var(--color-others)" },
+];
+
+export const pieChartConfig2 = {
+  share: {
+    label: "Market Share",
+  },
+  amazon: {
+    label: "Amazon",
+    color: "hsl(var(--accent))",
+  },
+  microsoft: {
+    label: "Microsoft",
+    color: "rebeccapurple",
+  },
+  google: {
+    label: "Google",
+    color: "indianred",
+  },
+  others: {
+    label: "Others",
+    color: "hsl(var(--accent))",
+  },
+};

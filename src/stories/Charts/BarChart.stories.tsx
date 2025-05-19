@@ -14,12 +14,6 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {
-    className: {
-      control: "text",
-      description: "The class name of the component",
-    },
-  },
 } satisfies Meta<typeof CustomBarChart>;
 
 export default meta;
