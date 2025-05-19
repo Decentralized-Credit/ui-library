@@ -30,6 +30,7 @@ import {
 import AccentLine from "@/components/AccentLine";
 import OverlineTag from "@/components/OverlineTag";
 import { SectionFadeIn } from "@/components/SectionFadeIn";
+import SheenBlock from "@/components/SheenBlock";
 
 export {
   Button,
@@ -62,4 +63,5 @@ export {
   AccentLine,
   OverlineTag,
   SectionFadeIn,
+  SheenBlock,
 };

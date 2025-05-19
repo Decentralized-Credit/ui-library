@@ -18,6 +18,8 @@ interface WithChildren {
   children: ReactReactNode;
 }
 
+export interface BaseComponentProps extends WithClassName, WithChildren {}
+
 export interface CardContentProps extends WithClassName, WithColorScheme {
   icon: ReactNode;
   title: string;
