@@ -1,0 +1,35 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Components/SVGs/Documentation" />
+
+# SVG Components
+
+These SVGs are implemented as React components, so they are easier to animate. All SVG components utilize the base SVG props defined below, unless indicated otherwise.
+
+## Props Interface
+
+```typescript
+interface SVGProps {
+  width?: number;
+  height?: number;
+  fill?: string;
+  stroke?: string;
+  strokeWidth?: number;
+  className?: string;
+}
+```
+
+## Example Usage
+
+```tsx
+import { MyIcon } from './icons/MyIcon';
+
+// Basic usage
+<MyIcon width={24} height={24} />
+
+// With custom colors
+<MyIcon fill="red" stroke="blue" strokeWidth={2} />
+
+// With additional className to change the color
+<MyIcon className="text-accent" />
+```
