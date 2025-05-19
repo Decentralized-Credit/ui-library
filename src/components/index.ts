@@ -36,6 +36,7 @@ import {
   CustomLineChart,
   CustomPieChart,
 } from "@/components/Charts";
+import EmptyStateAnimation from "@/components/EmptyStateAnimation";
 
 export {
   Button,
@@ -72,4 +73,5 @@ export {
   CustomBarChart,
   CustomLineChart,
   CustomPieChart,
+  EmptyStateAnimation,
 };
