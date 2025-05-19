@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import CustomLoader from "@/components/custom/CustomLoader";
+import CustomLoader from "@/components/CustomLoader";
 
 const meta = {
   title: "Components/CustomLoader",
