@@ -108,7 +108,7 @@ export default function AnimatedPathGraphic({
             opacity: 1;
           }
           100% {
-            opacity: 1;
+            opacity: 0;
           }
         }
         
@@ -175,22 +175,18 @@ export default function AnimatedPathGraphic({
 
   // Process and render the SVG content
   const SvgContent = () => {
-    if (React.isValidElement(svg)) {
-      // Check if the SVG already has a width prop set
-      const svgProps = svg.props || {};
-      const hasExplicitWidth = svgProps.width !== undefined;
+    const svgElement = svg as React.ReactElement<React.SVGProps<SVGSVGElement>>;
+    const svgProps = svgElement.props;
 
-      return React.cloneElement(svg as React.ReactElement, {
-        width: hasExplicitWidth ? svgProps.width : width,
-        className: "text-current w-full h-full",
-        fill: useStroke ? "none" : "currentColor",
-        stroke: useStroke ? "currentColor" : "none",
-        strokeWidth: useStroke ? strokeWidth : 0,
-        preserveAspectRatio: "xMidYMid meet",
-        vectorEffect: "non-scaling-stroke",
-      });
-    }
-    return svg;
+    return React.cloneElement(svgElement, {
+      width: svgProps.width ?? width,
+      className: "text-current w-full h-full",
+      fill: useStroke ? "none" : "currentColor",
+      stroke: useStroke ? "currentColor" : "none",
+      strokeWidth: useStroke ? strokeWidth : 0,
+      preserveAspectRatio: "xMidYMid meet",
+      vectorEffect: "non-scaling-stroke",
+    });
   };
 
   return (

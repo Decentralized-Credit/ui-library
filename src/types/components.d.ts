@@ -59,7 +59,7 @@ export interface AnimatedPathGraphicProps
     WithDimensions {
   svg: React.ReactNode;
   baseColor?: string;
-  gloWithClassNameolor?: string;
+  glowColor?: string;
   duration?: number;
   delay?: number;
   stagger?: number;
