@@ -8,7 +8,7 @@ const theme = create({
 
   brandTitle: "Decentralized Credit UI Library",
   brandUrl: "https://metaversal.gg",
-  brandTarget: "_self",
+  brandTarget: "/",
 });
 
 addons.setConfig({
