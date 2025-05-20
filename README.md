@@ -3,7 +3,17 @@
 A React-based UI library. Built with TypeScript, Tailwind CSS, and shadcn/ui components.
 Check out the [Storybook](https://ui-library-41075982134.europe-west1.run.app/) for documentation.
 
-install with `pnpm i @decentralized-credit/ui-library`
+## Install
+
+This package is published to GitHub Packages, not npm. To install it in your project:
+
+1. Create a `.npmrc` file in your project and add the following:
+
+```
+@decentralized-credit:registry=https://npm.pkg.github.com
+```
+
+2. Install with `pnpm i @decentralized-credit/ui-library`
 
 ## About
 
