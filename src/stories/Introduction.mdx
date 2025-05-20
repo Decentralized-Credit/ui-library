@@ -1,0 +1,100 @@
+import { Meta } from "@storybook/blocks";
+import RemountBtn from "./assets/remount-btn.png";
+
+<Meta title="Introduction" />
+
+# Decentralized Credit UI Library
+
+A React-based UI library. Built with TypeScript, Tailwind CSS, and shadcn/ui components.
+
+Install with `pnpm i @decentralized-credit/ui-library`
+
+## About
+
+- Modern and accessible UI components
+- Built with TypeScript
+- Tailwind CSS for styling
+- Storybook for documentation and development
+- ESLint and Prettier for code quality
+- Vite for fast development and building
+
+## Using the UI Library
+
+### Installation
+
+The package is publicly available on GitHub Packages. You can install it directly with:
+
+```bash
+pnpm i @decentralized-credit/ui-library
+```
+
+### Basic Usage
+
+```jsx
+import { Button } from "@decentralized-credit/ui-library";
+
+function MyComponent() {
+  return <Button variant="primary">Click me</Button>;
+}
+```
+
+### Component Documentation
+
+Refer to the docs page on each story for details on how to use the components.
+There is a control panel on the story page for each component that has props you can change.
+
+## Contributing
+
+### Development Workflow
+
+When adding a new component:
+
+- Open an issue in the repository with the name of the component
+- Include component purpose, behaviors, variants, and props API design
+- Add documentation in Storybook following our standards
+
+### Component Implementation Guidelines
+
+1. **TypeScript and Typing**:
+
+   - Use TypeScript interfaces for props
+   - Export types for consumers
+   - Avoid using `any` and use proper type constraints
+
+2. **Accessibility**:
+
+   - Follow WAI-ARIA practices
+   - Include proper ARIA attributes
+   - Ensure keyboard navigation support
+
+3. **Styling**:
+
+   - Use Tailwind CSS for styling
+   - Ensure responsiveness across breakpoints
+
+4. **Best Practices**:
+   - Keep components focused on a single responsibility
+   - Implement proper prop validation
+   - Prefer functional components with hooks
+
+### Storybook Documentation Standards
+
+Each component should have stories that include:
+
+- Basic usage example
+- Variants showcase
+- Interactive controls for all props
+- Dark mode example when applicable
+- Responsive behavior demonstrations
+- Accessibility status and notes
+
+## Notes
+
+Some components need to be remounted to see the changes.
+This is the remount button in the toolbar at the top of the screen:
+
+<img src={RemountBtn} alt="Remount Button" width={400} />
+
+## External Links
+
+- [GitHub Repository](https://github.com/decentralized-credit/ui-library)
