@@ -63,6 +63,64 @@ function MyComponent() {
 }
 ```
 
+## Contributing
+
+### Development Workflow
+
+**When adding a new component:**
+
+- Open an issue in the repository with the name of the component. Example: `Add Button component`
+- Include:
+  - Component name and purpose
+  - Expected behaviors and variants
+  - Props and API design
+  - Visual mockups or design references (if available)
+
+#### Folder Structure
+
+```
+.
+├── public                  # public assets, eg: fonts & images
+├── src
+│   ├── components          # components folder
+│   │   ├── svg             # svg components
+│   │   └── ui              # shadcn components only
+│   ├── lib                 # utility and other functions
+│   ├── stories             # storybook stories
+│   └── types               # type interfaces and types
+
+```
+
+#### Creating new components
+
+When adding a new component, import it and then export it in the `src/components/index.ts` file.
+
+When adding new type definitions, add them to the `src/types/index.d.ts` file.
+
+#### Component Implementation Guidelines
+
+1. **TypeScript and Typing**:
+
+   - Use TypeScript interfaces for props
+   - Export types for consumers
+   - Avoid using `any` and use proper type constraints
+
+2. **Accessibility**:
+
+   - Follow WAI-ARIA practices
+   - Include proper ARIA attributes
+   - Ensure keyboard navigation support
+
+3. **Styling**:
+
+   - Use Tailwind CSS for styling
+   - Ensure responsiveness across breakpoints
+
+4. **Best Practices**:
+   - Keep components focused on a single responsibility
+   - Implement proper prop validation
+   - Prefer functional components with hooks
+
 ## External Links
 
 - [Storybook Documentation](https://ui-library-41075982134.europe-west1.run.app/)
