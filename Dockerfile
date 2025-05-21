@@ -40,4 +40,4 @@ COPY --from=builder /app/storybook-static ./storybook-static
 EXPOSE 8080
 
 # Start serve to host the static files
-CMD ["serve", "-s", "storybook-static", "-l", "8080"]
+CMD ["serve", "storybook-static", "-l", "8080"]
