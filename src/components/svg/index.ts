@@ -16,6 +16,7 @@ import SpotifyIcon from "./SpotifyIcon";
 import VertLines from "./VertLines";
 import XIcon from "./XIcon";
 import YoutubeIcon from "./YoutubeIcon";
+import R from "./R";
 
 export {
   ArrowIcon,
@@ -36,4 +37,5 @@ export {
   VertLines,
   XIcon,
   YoutubeIcon,
+  R,
 };

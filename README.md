@@ -66,10 +66,10 @@ pnpm i @decentralized-credit/ui-library
 ### Basic Usage
 
 ```jsx
-import { Button } from "@decentralized-credit/ui-library";
+import { EmptyStateAnimation } from "@decentralized-credit/ui-library";
 
 function MyComponent() {
-  return <Button variant="primary">Click me</Button>;
+  return <EmptyStateAnimation />;
 }
 ```
 
@@ -141,88 +141,36 @@ When adding new type definitions, add them to the `src/types/index.d.ts` file.
 - Accessibility status and notes
 
 ```tsx
-// Example Button.stories.tsx
+// Example Breadcrumbs.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { Button } from "@/components/ui/button";
-
-const variants = [
-  "default",
-  "destructive",
-  "outline",
-  "secondary",
-  "ghost",
-  "link",
-] as const;
-
-const sizes = ["default", "sm", "lg", "icon"] as const;
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 const meta = {
-  title: "UI/Button",
-  component: Button,
+  title: "Components/Breadcrumbs",
+  component: Breadcrumbs,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {
-    variant: {
-      control: { type: "select" },
-      options: variants,
-      description: "The visual style of the button",
-    },
-    size: {
-      control: { type: "select" },
-      options: sizes,
-      description: "The size of the button",
-    },
-    asChild: {
-      control: "boolean",
-      description: "When true, the button will be rendered as its child",
-    },
-    disabled: {
-      control: "boolean",
-      description: "When true, the button is disabled",
-    },
     className: {
       control: "text",
-      description: "Additional CSS classes to add to the button",
-    },
-    children: {
-      control: "text",
-      description: "The content of the button",
+      description: "Additional CSS classes to add to the component",
     },
   },
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+  args: {},
+} satisfies Meta<typeof Breadcrumbs>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    variant: "default",
-    children: "Button",
-  },
-};
-
-export const Secondary: Story = {
-  args: {
-    variant: "secondary",
-    children: "Button",
-  },
-};
-
-export const Large: Story = {
-  args: {
-    size: "lg",
-    children: "Button",
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: "sm",
-    children: "Button",
+    breadcrumbs: [
+      { label: "Home", href: "/" },
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
 };
 ```
