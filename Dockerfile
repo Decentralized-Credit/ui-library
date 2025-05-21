@@ -24,19 +24,20 @@ COPY . .
 # Build storybook
 RUN pnpm build-storybook
 
-# Production image using a simple static file server
+# Production image using serve
 FROM node:22-alpine AS dist
 
+# Install serve globally
+RUN npm install -g serve
+
+USER node
 WORKDIR /app
 
 # Copy the storybook-static directory which contains the built storybook
 COPY --from=builder /app/storybook-static ./storybook-static
 
-# Install a simple HTTP server
-RUN npm install -g http-server
-
-# Expose port for Cloud Run
+# Expose port for serve
 EXPOSE 8080
 
-# Start the HTTP server on the port specified by the PORT environment variable
-CMD ["sh", "-c", "http-server ./storybook-static -p ${PORT:-8080} --cors --silent"]
+# Start serve to host the static files
+CMD ["serve", "-s", "storybook-static", "-l", "8080"]
