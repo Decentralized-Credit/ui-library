@@ -75,6 +75,37 @@ function MyComponent() {
 
 ## Contributing
 
+### Version Management Requirements
+
+**Important:** When pushing to the main branch, you must update the package version.
+
+To update the version:
+
+```bash
+# For bug fixes and patch updates
+pnpm version patch
+
+# For new features (backwards compatible)
+pnpm version minor
+
+# For breaking changes
+pnpm version major
+```
+
+This command will:
+
+1. Update the version in package.json
+2. Create a git tag for the new version
+3. Commit the changes
+
+After running the version command, push both the commit and the tags:
+
+```bash
+git push && git push --tags
+```
+
+The GitHub Actions workflow will then build and publish your updated package to GitHub Packages.
+
 ### Development Workflow
 
 **When adding a new component:**
