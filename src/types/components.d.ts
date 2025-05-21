@@ -103,3 +103,7 @@ export interface SectionFadeInProps extends WithClassName, WithChildren {
   /** Threshold for the intersection observer (0-1) */
   threshold?: number;
 }
+
+export interface LoadingIndicatorProps extends BaseSvgProps {
+  isLoading?: boolean;
+}
