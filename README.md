@@ -5,15 +5,11 @@ Check out the [Storybook](https://ui-library-41075982134.europe-west1.run.app/) 
 
 ## Install
 
-This package is published to GitHub Packages, not npm. To install it in your project:
+To install it in your project:
 
-1. Create a `.npmrc` file in your project and add the following:
-
+```bash
+pnpm i @metaversal.gg/ui-library
 ```
-@decentralized-credit:registry=https://npm.pkg.github.com
-```
-
-2. Install with `pnpm i @decentralized-credit/ui-library`
 
 ## About
 
@@ -59,14 +55,14 @@ pnpm build
 
 The package is publicly available on GitHub Packages. You can install it directly with:
 
-```
-pnpm i @decentralized-credit/ui-library
+```bash
+pnpm i @metaversal.gg/ui-library
 ```
 
 ### Basic Usage
 
 ```jsx
-import { EmptyStateAnimation } from "@decentralized-credit/ui-library";
+import { EmptyStateAnimation } from "@metaversal.gg/ui-library";
 
 function MyComponent() {
   return <EmptyStateAnimation />;
