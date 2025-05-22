@@ -1,9 +1,15 @@
-.loading-icon .bottom-rect {
-  animation: rotationFromBottomLeft 3s ease infinite;
+.loadingIcon {
+  .topRect {
+    animation: rotationFromTopRight 3s ease infinite;
+  }
+  .bottomRect {
+    animation: rotationFromBottomLeft 3s ease infinite;
+  }
 }
 
 @keyframes rotationFromBottomLeft {
-  0% {
+  0%,
+  100% {
     translate: 0 0;
   }
 
@@ -19,18 +25,11 @@
   65% {
     translate: 50% 0;
   }
-
-  100% {
-    translate: 0 0;
-  }
-}
-
-.loading-icon .top-rect {
-  animation: rotationFromTopRight 3s ease infinite;
 }
 
 @keyframes rotationFromTopRight {
-  0% {
+  0%,
+  100% {
     translate: 0 0;
   }
 
@@ -45,9 +44,5 @@
   60%,
   65% {
     translate: -50% 0;
-  }
-
-  100% {
-    translate: 0 0;
   }
 }

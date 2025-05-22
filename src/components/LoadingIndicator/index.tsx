@@ -1,5 +1,5 @@
 import { LoadingIndicatorProps } from "@/types";
-import "./styles.css";
+import styles from "./styles.module.css";
 
 export default function LoadingIndicator({
   width = 26,
@@ -15,7 +15,7 @@ export default function LoadingIndicator({
       preserveAspectRatio="xMidYMid meet"
       width={width}
       height={height}
-      className={`${isLoading ? "loading-icon" : ""} ${className}`}
+      className={`${isLoading ? styles.loadingIcon : ""} ${className}`}
       viewBox="0 0 26 26"
       xmlns="http://www.w3.org/2000/svg"
       style={{
@@ -29,7 +29,7 @@ export default function LoadingIndicator({
         fill={fill}
         stroke={stroke}
         strokeWidth={strokeWidth}
-        className="bottom-rect"
+        className={styles.bottomRect}
       />
       <rect
         x="13"
@@ -38,7 +38,7 @@ export default function LoadingIndicator({
         fill={fill}
         stroke={stroke}
         strokeWidth={strokeWidth}
-        className="top-rect"
+        className={styles.topRect}
       />
     </svg>
   );
