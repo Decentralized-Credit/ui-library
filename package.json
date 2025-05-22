@@ -1,7 +1,7 @@
 {
-  "name": "@decentralized-credit/ui-library",
+  "name": "@metaversal.gg/ui-library",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React UI Library",
   "type": "module",
   "main": "dist/index.js",
@@ -17,9 +17,6 @@
     "dist"
   ],
   "sideEffects": false,
-  "publishConfig": {
-    "@decentralized-credit:registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build:types": "tsc -p tsconfig.build.json",
