@@ -3,7 +3,7 @@ const styles = `
   @keyframes color { to { opacity: 0.1 } }
 `;
 
-export default function EmptyStateAnimation({ size = 6 }) {
+export default function EmptyStateAnimation({ size = 20 }) {
   return (
     <>
       <style>{styles}</style>
@@ -13,7 +13,7 @@ export default function EmptyStateAnimation({ size = 6 }) {
             key={index}
             style={{
               animationDelay: `${Math.random() * 1000}ms`,
-              width: `${size}px`,
+              width: `${(size - 2) / 3}px`,
             }}
             className="animate aspect-square rounded-xs bg-gray-200"
           />

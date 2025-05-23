@@ -11,7 +11,7 @@ const meta = {
     size: {
       control: "number",
       description: "The size in pixels",
-      defaultValue: 6,
+      defaultValue: 20,
     },
   },
   tags: ["autodocs"],
@@ -22,6 +22,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    size: 6,
+    size: 20,
   },
 };
