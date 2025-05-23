@@ -31,7 +31,8 @@ export default defineConfig({
       ],
       outDir: "dist",
       tsconfigPath: path.resolve(__dirname, "tsconfig.build.json"),
-      rollupTypes: true,
+      insertTypesEntry: true,
+      copyDtsFiles: true,
     }),
   ],
   build: {
