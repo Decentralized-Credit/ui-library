@@ -11,6 +11,16 @@ To install it in your project:
 pnpm i @metaversal.gg/ui-library
 ```
 
+As this project uses Tailwind CSS, you will need to configure your project to scan the library's files for Tailwind classes.
+
+In `tailwind.config.js`, add the following:
+
+```js
+module.exports = {
+  content: ["./node_modules/@metaversal.gg/ui-library/dist/**/*.js"],
+};
+```
+
 ## About
 
 - Modern and accessible UI components
