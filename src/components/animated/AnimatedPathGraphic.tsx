@@ -22,9 +22,6 @@ export default function AnimatedPathGraphic({
     __html: "",
   });
 
-  // Calculate appropriate padding based on glow intensity to prevent clipping
-  const glowPadding = Math.max(glowIntensity * 2, 10); // At least 10px padding
-
   // Generate a unique ID for this component instance
   const [uniqueId] = useState(
     () => `animated-path-${Math.random().toString(36).substring(2, 11)}`,
@@ -108,7 +105,7 @@ export default function AnimatedPathGraphic({
             opacity: 1;
           }
           100% {
-            opacity: 0;
+            opacity: 1;
           }
         }
         
@@ -194,7 +191,6 @@ export default function AnimatedPathGraphic({
       id={uniqueId}
       className={`inline-flex items-center justify-center ${className}`}
       style={{
-        padding: `${glowPadding}px`,
         boxSizing: "content-box",
         width,
         height,
