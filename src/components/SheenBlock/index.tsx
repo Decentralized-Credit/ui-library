@@ -8,7 +8,7 @@ export default function SheenBlock({
   return (
     <div
       className={cn(
-        "relative flex items-center gap-3 px-8 py-6",
+        "relative flex items-center gap-3 px-5 py-4",
         "border-accent/10 rounded-sm border",
         "bg-accent/5 text-accent",
         "font-mono text-base uppercase",
