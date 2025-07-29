@@ -22,8 +22,8 @@ export default function AnimatedPathGraphic({
     __html: "",
   });
 
-  // Generate a unique ID for this component instance
-  const uniqueId = useId();
+  // Generate a unique ID for this component instance and remove characters not compatible with CSS animation names
+  const uniqueId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
 
   // Create the CSS for path animations
   useEffect(() => {
