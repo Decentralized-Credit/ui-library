@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useId } from "react";
 import { AnimatedPathGraphicProps } from "@/types";
 
 export default function AnimatedPathGraphic({
@@ -23,9 +23,7 @@ export default function AnimatedPathGraphic({
   });
 
   // Generate a unique ID for this component instance
-  const [uniqueId] = useState(
-    () => `animated-path-${Math.random().toString(36).substring(2, 11)}`,
-  );
+  const uniqueId = useId();
 
   // Create the CSS for path animations
   useEffect(() => {
