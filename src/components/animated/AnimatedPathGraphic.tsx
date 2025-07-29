@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useId } from "react";
 import { AnimatedPathGraphicProps } from "@/types";
 
 export default function AnimatedPathGraphic({
@@ -22,10 +22,8 @@ export default function AnimatedPathGraphic({
     __html: "",
   });
 
-  // Generate a unique ID for this component instance
-  const [uniqueId] = useState(
-    () => `animated-path-${Math.random().toString(36).substring(2, 11)}`,
-  );
+  // Generate a unique ID for this component instance and remove characters not compatible with CSS animation names
+  const uniqueId = useId().replace(/[^a-zA-Z0-9_-]/g, "");
 
   // Create the CSS for path animations
   useEffect(() => {

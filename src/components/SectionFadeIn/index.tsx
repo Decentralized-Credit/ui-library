@@ -33,9 +33,9 @@ export const SectionFadeIn = ({
   return (
     <div
       ref={sectionRef}
+      style={delay ? { transitionDelay: `${delay}ms` } : {}}
       className={cn(
         "relative z-10 w-full translate-y-10 opacity-0 transition-all duration-700",
-        delay && `delay-[${delay}ms]`,
         className,
       )}
     >
