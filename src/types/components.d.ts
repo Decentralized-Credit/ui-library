@@ -74,6 +74,8 @@ export interface AnimatedPathGraphicProps
   strokeWidth?: number;
   loop?: boolean;
   loopCount?: number | "infinite";
+  strokeLinecap?: "butt" | "round" | "square";
+  strokeLinejoin?: "bevel" | "miter" | "round";
 }
 
 export interface BaseSvgProps extends WithClassName, WithDimensions {

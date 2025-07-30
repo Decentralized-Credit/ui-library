@@ -62,6 +62,16 @@ const meta = {
       text: "infinite",
       description: "The number of times to loop the animation",
     },
+    strokeLinecap: {
+      control: "select",
+      options: ["butt", "round", "square"],
+      description: "The linecap of the stroke",
+    },
+    strokeLinejoin: {
+      control: "select",
+      options: ["miter", "round", "bevel"],
+      description: "The linejoin of the stroke",
+    },
   },
 } satisfies Meta<typeof AnimatedPathGraphic>;
 
@@ -82,5 +92,7 @@ export const Primary: Story = {
     useStroke: true,
     loopCount: "infinite",
     className: "text-green-500",
+    strokeLinecap: "butt",
+    strokeLinejoin: "miter",
   },
 };

@@ -16,6 +16,8 @@ export default function AnimatedPathGraphic({
   loop = true,
   loopCount = "infinite",
   className = "",
+  strokeLinecap = "butt",
+  strokeLinejoin = "miter",
 }: AnimatedPathGraphicProps) {
   // State for animation styles
   const [animationStyles, setAnimationStyles] = useState<{ __html: string }>({
@@ -181,6 +183,8 @@ export default function AnimatedPathGraphic({
       strokeWidth: useStroke ? strokeWidth : 0,
       preserveAspectRatio: "xMidYMid meet",
       vectorEffect: "non-scaling-stroke",
+      strokeLinecap,
+      strokeLinejoin,
     });
   };
 
