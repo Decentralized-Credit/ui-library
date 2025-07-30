@@ -16,8 +16,8 @@ export default function AnimatedPathGraphic({
   loop = true,
   loopCount = "infinite",
   className = "",
-  strokeLinecap = "butt",
-  strokeLinejoin = "miter",
+  strokeLinecap,
+  strokeLinejoin,
 }: AnimatedPathGraphicProps) {
   // State for animation styles
   const [animationStyles, setAnimationStyles] = useState<{ __html: string }>({
@@ -76,8 +76,6 @@ export default function AnimatedPathGraphic({
           stroke: currentColor;
           stroke-width: ${strokeWidth};
           stroke-dasharray: 1000;
-          stroke-linecap: round;
-          stroke-linejoin: round;
           vector-effect: non-scaling-stroke;
           will-change: stroke-dashoffset, opacity, filter;
         }
